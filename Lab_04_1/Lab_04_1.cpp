@@ -8,46 +8,43 @@
 #include <cmath>
 
 using namespace std;
+double k, N, S;
 
 int main()
 {
-	double k, N, S;
-
-	cout << "k = "; cin >> k;
 	cout << "N = "; cin >> N;
-
-	S = 0;
+	S = 1;
 	k = N;
 	while (k <= 19)
 	{
-		S += (k - N) / (k + N) + 1;
+		S *= (k - N) / (k + N) + 1; 
 		k++;
 	}
 	cout << S << endl;
 
-	S = 0;
+	S = 1;
 	k = N;
-
-	do
-	{
-		S += (k - N) / (k + N) + 1;
+	do {
+		S *= (k - N) / (k + N) + 1;
 		k++;
 	} while (k <= 19);
 	cout << S << endl;
 
-	S = 0;
+	S = 1;
+	k = N;
 
 	for (k = N; k <= 19; k++)
 	{
-		S += (k - N) / (k + N) + 1;
+		S *= (k - N) / (k + N) + 1;
 	}
 	cout << S << endl;
-	
-	S = 0;
-	
+
+	S = 1;
+	k = N;
+
 	for (k = 19; k >= N; k--)
 	{
-		S += (k - N) / (k + N) + 1;
+		S *= (k - N) / (k + N) + 1;
 	}
 	cout << S << endl;
 }
