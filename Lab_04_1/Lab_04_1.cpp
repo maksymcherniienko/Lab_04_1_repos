@@ -40,7 +40,6 @@ int main()
 	cout << S << endl;
 
 	S = 1;
-	k = N;
 
 	for (k = 19; k >= N; k--)
 	{
